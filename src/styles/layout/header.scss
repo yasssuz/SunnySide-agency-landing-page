@@ -1,0 +1,117 @@
+@use '../core/mixins.scss' as *;
+@use '../core/colors.scss' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(30) calc((100vw - 1274px) / 2);
+  margin: 0 24px;
+  position: relative;
+
+  &__logo {
+    width: 130px;
+    height: 26px;
+  }
+
+  &__nav-toggler {
+    display: block;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      display: block;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    span + span {
+      margin-top: 6px;
+    }
+
+    &.active {
+      span:first-of-type {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      span:last-of-type {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background: white;
+    width: 100%;
+    top: 105px;
+    padding: rem(45);
+    visibility: hidden;
+    opacity: 0;
+    right: -100vw;
+    transition: all 0.3s ease;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      right: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -25px;
+      border-right: 25px solid white;
+      border-top: 25px solid transparent;
+    }
+
+    a {
+      text-decoration: none;
+      color: $DarkGrayishBlue;
+      text-transform: capitalize;
+      font: rem(18) 'Barlow';
+      transition: transform 0.2s ease;
+      letter-spacing: 0.4px;
+
+      &:hover {
+        transform: scale(1.05);
+        text-decoration: underline;
+      }
+    }
+
+    a + a {
+      margin-top: rem(30);
+    }
+
+    a:last-of-type {
+      background: $Yellow;
+      color: black;
+      width: rem(140);
+      height: rem(55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+      text-transform: uppercase;
+      font: rem(17) 'Fraunces';
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        border: 2px solid $Yellow;
+        background: transparent;
+        color: $Yellow;
+      }
+    }
+  }
+}

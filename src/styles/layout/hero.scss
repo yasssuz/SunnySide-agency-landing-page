@@ -1,0 +1,24 @@
+@use '../core/mixins.scss' as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 84%;
+
+  h1 {
+    color: white;
+    font: rem(45) 'Fraunces';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    max-width: 10ch;
+    text-align: center;
+    margin-top: -70px;
+  }
+
+  img {
+    margin-top: rem(50);
+    width: 36px;
+  }
+}
