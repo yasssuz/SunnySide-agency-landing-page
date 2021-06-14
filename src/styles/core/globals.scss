@@ -15,3 +15,17 @@ select {
     outline: red 2px dashed;
   }
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
+
+#page-hero-wrapper {
+  background: url('../../assets/mobile/image-header.jpg') no-repeat center;
+  background-size: cover;
+  height: 540px;
+}
