@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button, 
+a, 
+input, 
+textarea, 
+select {
+  &:focus {
+    outline: red 2px dashed;
+  }
+}
