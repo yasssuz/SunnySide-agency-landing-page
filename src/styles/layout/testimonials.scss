@@ -1,0 +1,49 @@
+@use '../core/colors.scss' as *;
+@use '../core/mixins.scss' as *;
+
+.testimonials {
+  padding: rem(64) rem(24);
+  text-align: center;
+
+  h4 {
+    color: $GrayishBlue;
+    text-transform: uppercase;
+    font: rem(17) 'Fraunces', sans-serif;
+    letter-spacing: 4px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin: rem(65) 0 rem(30);
+      border-radius: 50%;
+      height: 75px;
+      display: block;
+    }
+
+    q {
+      font: rem(18) 'Barlow', sans-serif;
+      color: $VeryDarkGrayishBlue;
+      margin-bottom: rem(25);
+    }
+
+    h5 {
+      font: rem(19) 'Fraunces', sans-serif;
+      font-weight: 900;
+      margin-bottom: rem(10);
+    }
+
+    cite {
+      font: rem(14) 'Barlow', sans-serif;
+      color: $GrayishBlue;
+    }
+  }
+}
+
