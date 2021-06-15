@@ -12,6 +12,11 @@
   &__logo {
     width: 130px;
     height: 26px;
+
+    @media screen and (min-width: 768px) {
+      width: 170px;
+      height: 34px;
+    }
   }
 
   &__nav-toggler {
@@ -19,6 +24,10 @@
     cursor: pointer;
     border: none;
     background: transparent;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
 
     span {
       width: 25px;
@@ -61,6 +70,16 @@
     right: -100vw;
     transition: all 0.3s ease;
 
+    @media screen and (min-width: 768px) {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: transparent;
+      flex-direction: row;
+      padding: 0;
+      justify-content: flex-end;
+    }
+
     &.active {
       opacity: 1;
       visibility: visible;
@@ -74,6 +93,10 @@
       top: -25px;
       border-right: 25px solid white;
       border-top: 25px solid transparent;
+    
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
     }
 
     a {
@@ -88,10 +111,24 @@
         transform: scale(1.05);
         text-decoration: underline;
       }
+
+      @media screen and (min-width: 768px) {
+        font-size: rem(19);
+        color: white;
+      }
     }
 
     a + a {
       margin-top: rem(30);
+
+      @media screen and (min-width: 768px) {
+        margin-top: 0;
+        margin-left: rem(35);
+      }
+
+      @media screen and (min-width: 850px) {
+        margin-left: rem(45);
+      }
     }
 
     a:last-of-type {
@@ -111,6 +148,18 @@
         border: 2px solid $Yellow;
         background: transparent;
         color: $Yellow;
+      }
+
+      @media screen and (min-width: 768px) {
+        background: white;
+        
+        &:hover {
+          background: #6FCFFF;
+          color: white;
+          border: none;
+          transform: none;
+          text-decoration: none;
+        }
       }
     }
   }

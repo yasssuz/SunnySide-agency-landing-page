@@ -15,6 +15,11 @@
     max-width: 10ch;
     text-align: center;
     margin-top: -70px;
+
+    @media screen and (min-width: 768px) {
+      max-width: unset;
+      font-size: rem(50);
+    }
   }
 
   img {
