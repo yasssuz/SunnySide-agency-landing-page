@@ -1,0 +1,46 @@
+@use '../core/mixins.scss' as *;
+@use '../core/colors.scss' as *;
+
+.footer {
+  padding: rem(60) rem(24);
+  text-align: center;
+  background: #90D4C5;
+
+  &__logo {
+    height: 35px;
+    margin-bottom: rem(30);
+  }
+
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: rem(300);
+    margin: auto;
+
+    a {
+      font: rem(19) 'Barlow', sans-serif;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      color: $DarkDesaturatedCyan;
+
+      &:hover {
+        transform: scale(1.1);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__socials {
+    width: 170px;
+    margin: rem(50) auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+      cursor: pointer;
+    }
+  }
+}
