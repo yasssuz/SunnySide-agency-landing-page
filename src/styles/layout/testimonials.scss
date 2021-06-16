@@ -3,17 +3,33 @@
 
 .testimonials {
   padding: rem(64) rem(24);
+  max-width: 1274px;
+  margin: auto;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    padding: rem(80) rem(24)
+  }
 
   h4 {
     color: $GrayishBlue;
     text-transform: uppercase;
     font: rem(17) 'Fraunces', sans-serif;
     letter-spacing: 4px;
+
+    @media screen and (min-width: 768px) {
+      font-size: rem(25);
+    }
   }
 
   &__list {
     list-style: none;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(19);
+    }
   }
 
   &__item {
@@ -32,6 +48,11 @@
       font: rem(18) 'Barlow', sans-serif;
       color: $VeryDarkGrayishBlue;
       margin-bottom: rem(25);
+      max-width: 45ch;
+
+      @media screen and (min-width: 768px) {
+        max-width: 30ch;
+      }
     }
 
     h5 {
