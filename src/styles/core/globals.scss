@@ -25,12 +25,12 @@ body {
 }
 
 #page-hero-wrapper {
-  background: url('../../assets/mobile/image-header.jpg') no-repeat center;
+  background: url('../assets/mobile/image-header.jpg') no-repeat center;
   background-size: cover;
   height: 540px;
 
   @media (min-width: 768px) {
-    background: url('../../assets/desktop/image-header.jpg') no-repeat center;
+    background: url('../assets/desktop/image-header.jpg') no-repeat center;
     background-size: cover;
     height: 680px;
   }
